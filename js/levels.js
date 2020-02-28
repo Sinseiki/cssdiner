@@ -1,14 +1,14 @@
 var levels = [
   {
-    helpTitle : "Select elements by their type",
-    selectorName : "Type Selector",
-    doThis : "Select the plates",
+    helpTitle : "태그로 요소를 선택하기",
+    selectorName : "태그 선택자",
+    doThis : "plate들을 선택하세요",
     selector : "plate",
     syntax : "A",
-    help : "Selects all elements of type <strong>A</strong>. Type refers to the type of tag, so <tag>div</tag>, <tag>p</tag> and <tag>ul</tag> are all different element types.",
+    help : "모든 <strong>A</strong> 태그들을 선택합니다.<br><br>또한 태그는 종류에 따라 다릅니다. 예를 들면 <tag>div</tag>, <tag>p</tag>, <tag>ul</tag>는 서로 다른 태그입니다.",
     examples : [
-      '<strong>div</strong> selects all <tag>div</tag> elements.',
-      '<strong>p</strong> selects all <tag>p</tag> elements.',
+      '<strong>div</strong>는 모든 <tag>div</tag> 태그로 이루어진 요소를 선택합니다.',
+      '<strong>p</strong>는 모든 <tag>p</tag> 태그로 이루어진 요소를 선택합니다.',
     ],
     boardMarkup: `
     <plate/>
@@ -16,15 +16,15 @@ var levels = [
     `
   },
   {
-    doThis : "Select the bento boxes",
+    doThis : "bento 상자들을 선택하세요",
     selector : "bento",
     syntax : "A",
-    helpTitle : "Select elements by their type",
-    selectorName : "Type Selector",
-    help : "Selects all elements of type <strong>A</strong>. Type refers to the type of tag, so <tag>div</tag>, <tag>p</tag> and <tag>ul</tag> are all different element types.",
+    helpTitle : "태그로 요소들을 선택하기",
+    selectorName : "태그 선택자",
+    help : "모든 <strong>A</strong> 태그들을 선택합니다. 또한 태그는 종류에 따라 다릅니다. 예를 들면 <tag>div</tag>, <tag>p</tag>, <tag>ul</tag>는 서로 다른 태그입니다.",
     examples : [
-      '<strong>div</strong> selects all <tag>div</tag> elements.',
-      '<strong>p</strong> selects all <tag>p</tag> elements.',
+      '<strong>div</strong>는 모든 <tag>div</tag> 태그로 이루어진 요소를 선택합니다.',
+      '<strong>p</strong>는 모든 <tag>p</tag> 태그로 이루어진 요소를 선택합니다.',
     ],
     boardMarkup: `
     <bento/>
@@ -33,15 +33,15 @@ var levels = [
     `
   },
   {
-    doThis : "Select the fancy plate",
+    doThis : "fancy plate를 선택하세요",
     selector : "#fancy",
-    selectorName: "ID Selector",
-    helpTitle: "Select elements with an ID",
+    selectorName: "ID 선택자",
+    helpTitle: "ID로 요소를 선택하기",
     syntax: "#id",
-    help : 'Selects the element with a specific <strong>id</strong>. You can also combine the ID selector with the type selector.',
+    help : '특정한 <strong>id</strong>로 요소를 선택합니다.<br>ID 선택자를 태그 선택자와 합쳐 쓸 수도 있습니다.',
     examples : [
-      '<strong>#cool</strong> selects any element with <strong>id="cool"</strong>',
-      '<strong>ul#long</strong> selects <tag>ul id="long"</tag>'
+      '<strong>#cool</strong>은 <strong>id="cool"</strong>로 되어 있는 요소를 선택합니다.',
+      '<strong>ul#long</strong>은 <tag>ul id="long"</tag>로 되어 있는 요소를 선택합니다.'
     ],
     boardMarkup : `
     <plate id="fancy"/>
@@ -50,15 +50,15 @@ var levels = [
     `
   },
   {
-    helpTitle: "Select an element inside another element",
-    selectorName : "Descendant Selector",
-    doThis : "Select the apple on the plate",
+    helpTitle: "요소 안에 있는 요소를 선택하기",
+    selectorName : "자손 선택자",
+    doThis : "plate 안에 있는 apple을 선택하세요",
     selector : "plate apple",
     syntax: "A&nbsp;&nbsp;B",
-    help : "Selects all <strong>B</strong> inside of <strong>A</strong>. <strong>B</strong> is called a descendant because it is inside of another element.",
+    help : "<strong>A</strong> 안에 있는 모든 <strong>B</strong>를 선택합니다. <strong>B</strong>는 자손이라고 부르는데, 다른 요소의 안에 있기 때문입니다.",
     examples : [
-      '<strong>p&nbsp;&nbsp;strong</strong> selects all <tag>strong</tag> elements that are inside of any <tag>p</tag>',
-      '<strong>#fancy&nbsp;&nbsp;span</strong> selects any <tag>span</tag> elements that are inside of the element with <strong>id="fancy"</strong>',
+      '<strong>p&nbsp;&nbsp;strong</strong>은 모든 <tag>p</tag> 안에 있는 <tag>strong</tag> 요소를 선택합니다.',
+      '<strong>#fancy&nbsp;&nbsp;span</strong>은 모든 <strong>id="fancy"</strong>인 요소 안에 있는 <tag>span</tag> 요소를 선택합니다.',
     ],
     boardMarkup : `
     <bento/>
@@ -69,13 +69,13 @@ var levels = [
     `
   },
   {
-    doThis : "Select the pickle on the fancy plate",
+    doThis : "fancy plate 안에 있는 pickle을 선택하세요",
     selector : "#fancy pickle",
-    helpTitle: "Combine the Descendant & ID Selectors",
+    helpTitle: "자손 선택자와 ID 선택자를 함께 쓰기",
     syntax: "#id&nbsp;&nbsp;A",
-    help : 'You can combine any selector with the descendent selector.',
+    help : '당신은 다른 선택자와 자손 선택자를 결합할 수 있습니다.',
     examples : [
-      '<strong>#cool&nbsp;span</strong> selects all <tag>span</tag> elements that are inside of elements with <strong>id="cool"</strong>'
+      '<strong>#cool&nbsp;span</strong>은 모든 <strong>id="cool"</strong>인 요소 안에 있는 <tag>span</tag> 요소를 선택합니다.'
     ],
     boardMarkup : `
     <bento>
@@ -90,14 +90,14 @@ var levels = [
     `
   },
   {
-    doThis : "Select the small apples",
+    doThis : "small apple들을 선택하세요",
     selector : ".small",
-    selectorName: "Class Selector",
-    helpTitle: "Select elements by their class",
-    syntax: ".classname",
-    help : 'The class selector selects all elements with that class attribute. Elements can only have one ID, but many classes.',
+    selectorName: "클래스 선택자",
+    helpTitle: "클래스로 요소를 선택하기",
+    syntax: ".class",
+    help : '클래스 선택자는 해당 클래스를 가지고 있는 모든 요소를 선택합니다. 각 요소는 ID를 하나만 가질 수 있지만 클래스는 하나 이상 가질 수 있습니다.',
     examples : [
-    '<strong>.neato</strong> selects all elements with <strong>class="neato"</strong>'
+    '<strong>.neato</strong>는 <strong>class="neato"</strong>인 모든 요소를 선택합니다.'
     ],
     boardMarkup : `
     <apple/>
@@ -109,14 +109,14 @@ var levels = [
     `
   },
   {
-    doThis : "Select the small oranges",
+    doThis : "small orange들을 선택하세요",
     selector : "orange.small",
-    helpTitle: "Combine the Class Selector",
+    helpTitle: "클래스 선택자를 다른 선택자와 함께 쓰기",
     syntax: "A.className",
-    help : 'You can combine the class selector with other selectors, like the type selector.',
+    help : '당신은 클래스 선택자를 태그 선택자와 같은 다른 선택자를 결합할 수 있습니다.',
     examples : [
-      '<strong>ul.important</strong> selects all <tag>ul</tag> elements that have <strong>class="important"</strong>',
-      '<strong>#big.wide</strong> selects all elements with <strong>id="big"</strong> that also have <strong>class="wide"</strong>'
+      '<strong>ul.important</strong>는 모든 <tag>ul</tag> 요소들 중에서 <strong>class="important"</strong>인 요소들을 선택합니다.',
+      '<strong>#big.wide</strong>는 <strong>id="big"</strong>이면서 <strong>class="wide"</strong>인 요소를 선택합니다.'
     ],
     boardMarkup :`
     <apple/>
@@ -132,11 +132,11 @@ var levels = [
     </plate>`
   },
   {
-    doThis : "Select the small oranges in the bentos",
+    doThis : "bento들 안에 있는 small orange들을 선택하세요",
     selector : "bento orange.small",
-    syntax: "Put your back into it!",
-    helpTitle: "You can do it...",
-    help : 'Combine what you learned in the last few levels to solve this one!',
+    syntax: "생각해보세요!",
+    helpTitle: "당신은 할 수 있습니다...",
+    help : '그 동안 배웠던 것들을 결합하면 풀 수 있습니다.',
     boardMarkup : `
     <bento>
       <orange/>
@@ -154,15 +154,15 @@ var levels = [
     `
   },
   {
-    doThis : "Select all the plates and bentos",
-    selector : "plate,bento",
-    selectorName : "Comma Combinator",
-    helpTitle: "Combine, selectors, with... commas!",
+    doThis : "모든 plate들과 bento들을 선택하세요",
+    selector : "plate, bento",
+    selectorName : "쉼표 복합 선택자",
+    helpTitle: "결합하세요, 선택자들을... 쉼표로!",
     syntax : "A, B",
-    help : 'Thanks to Shatner technology, this selects all <strong>A</strong> and <strong>B</strong> elements. You can combine any selectors this way, and you can specify more than two.',
+    help : '샤트너 테크놀로지 덕분에, <strong>A</strong> 요소들과 <strong>B</strong> 요소들을 한번에 선택할 수 있습니다. 당신은 어떤 선택자들이건 이런 방법으로 결합을 시킬 수 있습니다. 그리고 당신은 두 개 이상의 선택자들을 지정할 수 있습니다.',
     examples: [
-    '<strong>p, .fun</strong> selects all <tag>p</tag> elements as well as all elements with <strong>class="fun"</strong>',
-    '<strong>a, p, div</strong> selects all <tag>a</tag>, <tag>p</tag> and <tag>div</tag> elements'
+    '<strong>p, .fun</strong>은 모든 <tag>p</tag> 요소들과 모든 <strong>class="fun"</strong>인 요소들을 선택합니다.',
+    '<strong>a, p, div</strong>는 모든 <tag>a</tag>, <tag>p</tag>, <tag>div</tag> 요소들을 선택합니다.'
     ],
     boardMarkup : `
     <pickle class="small"/>
@@ -181,14 +181,14 @@ var levels = [
     `
   },
   {
-    doThis : "Select all the things!",
+    doThis : "모든 걸 선택하세요!",
     selector : "*",
-    selectorName:  "The Universal Selector",
-    helpTitle: "You can select everything!",
+    selectorName:  "전체 선택자",
+    helpTitle: "당신은 모든 것을 선택할 수 있습니다!",
     syntax : "*",
-    help : 'You can select all elements with the universal selector! ',
+    help : '당신은 전체 선택자를 이용하여 모든 요소를 선택할 수 있습니다!',
     examples : [
-      '<strong>p *</strong> selects any element inside all <tag>p</tag> elements.',
+      '<strong>p *</strong>는 <tag>p</tag> 요소 안에 있는 모든 요소를 선택합니다.',
     ],
     boardMarkup : `
     <apple/>
@@ -203,14 +203,14 @@ var levels = [
     `
   },
   {
-    doThis : "Select everything on a plate",
+    doThis : "plate 안에 있는 모든 걸 선택하세요",
     selector : "plate *",
     syntax : "A&nbsp;&nbsp;*",
-    helpTitle: "Combine the Universal Selector",
-    help : 'This selects all elements inside of <strong>A</strong>.',
+    helpTitle: "전체 선택자를 함께 쓰기",
+    help : '<strong>A</strong> 안에 있는 모든 요소들을 선택합니다.',
     examples : [
-      '<strong>p *</strong> selects every element inside all <tag>p</tag> elements.',
-      '<strong>ul.fancy *</strong> selects every element inside all <tag>ul class="fancy"</tag> elements.'
+      '<strong>p *</strong>은 <tag>p</tag> 안에 있는 모든 요소들을 선택합니다.',
+      '<strong>ul.fancy *</strong>는 <tag>ul class="fancy"</tag> 안에 있는 모든 요소들을 선택합니다.'
     ],
     boardMarkup: `
     <plate id="fancy">
@@ -225,15 +225,15 @@ var levels = [
     </plate>`
   },
   {
-    doThis : "Select every apple that's next to a plate",
+    doThis : "plate 바로 다음에 있는 apple들을 선택하세요",
     selector : "plate + apple",
-    helpTitle: "Select an element that directly follows another element",
-    selectorName: "Adjacent Sibling Selector",
+    helpTitle: "다른 요소의 바로 다음에 있는 요소를 선택하기",
+    selectorName: "인접 형제 선택자",
     syntax : "A + B",
-    help : "This selects all <strong>B</strong> elements that directly follow <strong>A</strong>. Elements that follow one another are called siblings. They're on the same level, or depth. <br/><br/>In the HTML markup for this level, elements that have the same indentation are siblings.",
+    help : "<strong>A</strong> 요소 바로 다음에 따르는 형제인 <strong>B</strong> 요소를 선택합니다. 같은 부모 안에 있는 자식 요소를 서로 형제라고 합니다. <br/><br/>HTML 마크업에서는 들여쓴 칸의 크기가 똑같은 요소들을 형제라고 합니다.",
     examples : [
-      '<strong>p + .intro</strong> selects every element with <strong>class="intro"</strong> that directly follows a <tag>p</tag>',
-      '<strong>div + a</strong> selects every <tag>a</tag> element that directly follows a <tag>div</tag>'
+      '<strong>p + .intro</strong>는 <tag>p</tag> 바로 다음에 있는 <strong>class="intro"</strong>인 요소를 선택합니다.',
+      '<strong>div + a</strong>는 <tag>div</tag> 바로 다음에 있는 <tag>a</tag> 요소를 선택합니다.'
     ],
     boardMarkup : `
     <bento>
@@ -248,14 +248,14 @@ var levels = [
     `
   },
   {
-    selectorName: "General Sibling Selector",
-    helpTitle: "Select elements that follows another element",
+    selectorName: "일반 형제 선택자",
+    helpTitle: "다른 요소 다음에 있는 요소들을 선택하기",
     syntax: "A ~ B",
-    doThis : "Select the pickles beside the bento",
+    doThis : "bento 다음에 있는 pickle들을 선택하세요",
     selector : "bento ~ pickle",
-    help : "You can select all siblings of an element that follow it. This is like the Adjacent Selector (A + B) except it gets all of the following elements instead of one.",
+    help : "당신은 어떤 요소 다음에 있는 형제 요소들을 선택할 수 있습니다. 인접 형제 선택자인 (A + B)와 비슷하지만 다음에 있는 모든 요소들을 하나가 아니라 모두 선택합니다.",
     examples : [
-      '<strong>A ~ B</strong> selects all <strong>B</strong> that follow a <strong>A</strong>'
+      '<strong>A ~ B</strong>는 <strong>A</strong> 다음에 있는 모든 <strong>B</strong>를 선택합니다.'
     ],
     boardMarkup : `
     <pickle/>
@@ -273,14 +273,14 @@ var levels = [
     `
   },
   {
-    selectorName: "Child Selector",
+    selectorName: "자식 선택자",
     syntax: "A > B&nbsp;",
-    doThis : "Select the apple directly on a plate",
+    doThis : "plate 바로 안에 있는 apple을 선택하세요",
     selector : "plate > apple",
-    helpTitle: "Select direct children of an element",
-    help : "You can select elements that are direct children of other elements. A child element is any element that is nested directly in another element. <br><br>Elements that are nested deeper than that are called descendant elements.",
+    helpTitle: "요소의 자식을 선택하기",
+    help : "당신은 요소의 자식 요소들을 선택할 수 있습니다. 자식 요소는 다른 요소(부모) 바로 안에 둘러싸인 요소를 말합니다. <br><br>자식보다 더 깊게 안으로 들어가 버린 요소는 자손이라고 합니다.",
     examples : [
-      '<strong>A > B</strong> selects all <strong>B</strong> that are a direct children <strong>A</strong>'
+      '<strong>A > B</strong>는 <strong>A</strong>의 자식인 모든 <strong>B</strong>를 선택합니다.'
     ],
     boardMarkup: `
     <plate>
@@ -297,17 +297,17 @@ var levels = [
     `
   },
   {
-    selectorName: "First Child Pseudo-selector",
-    helpTitle: "Select a first child element inside of another element",
-    doThis : "Select the top orange",
-    selector : "plate :first-child",
+    selectorName: "First Child 가상 선택자",
+    helpTitle: "첫째 요소를 선택하기",
+    doThis : "첫 번째 orange를 선택하세요",
+    selector : "orange:first-child",
     syntax: ":first-child",
 
-    help : "You can select the first child element. A child element is any element that is directly nested in another element. You can combine this pseudo-selector with other selectors.",
+    help : "당신은 첫 번째 자식 요소를 선택할 수 있습니다. 자식 요소는 다른 요소(부모) 바로 안에 둘러싸인 요소를 말합니다. 당신은 이 가상 선택자를 다른 선택자와 함께 쓸 수 있습니다.",
     examples : [
-      '<strong>:first-child</strong> selects all first child elements.',
-      '<strong>p:first-child</strong> selects all first child <tag>p</tag> elements.',
-      '<strong>div p:first-child</strong> selects all first child <tag>p</tag> elements that are in a <tag>div</tag>.'
+      '<strong>:first-child</strong>는 모든 첫째 자식 요소들을 선택합니다.',
+      '<strong>p:first-child</strong>는 모든 첫째 자식 요소들 중에 <tag>p</tag> 요소들을 선택합니다.',
+      '<strong>div p:first-child</strong>는 <tag>div</tag> 안에 있는 모든 첫째 자식 중에 <tag>p</tag> 요소를 선택합니다.'
     ],
     boardMarkup :`
     <bento/>
@@ -321,15 +321,15 @@ var levels = [
     `
   },
   {
-    selectorName: "Only Child Pseudo-selector",
-    helpTitle: "Select an element that are the only element inside of another one.",
-    doThis : "Select the apple and the pickle on the plates",
-    selector : "plate :only-child",
+    selectorName: "Only Child 가상 선택자",
+    helpTitle: "형제 없이 혼자 있는 요소를 선택하기",
+    doThis : "plate들 안에 혼자 있는 apple과 pickle을 선택하세요",
+    selector : "apple:only-child, pickle:only-child",
     syntax: ":only-child",
-    help : "You can select any element that is the only element inside of another one.",
+    help : "당신은 어떤 요소 안에 혼자 있는 요소를 선택할 수 있습니다.",
     examples : [
-      '<strong>span:only-child</strong> selects the <tag>span</tag> elements that are the only child of some other element.',
-      '<strong>ul li:only-child</strong> selects the only <tag>li</tag> element that are in a <tag>ul</tag>.'
+      '<strong>span:only-child</strong>는 어떤 요소 안에 있는 <tag>span</tag>들 중에서 형제 없이 혼자 있는 <tag>span</tag>을 선택합니다.',
+      '<strong>ul li:only-child</strong>는 <tag>ul</tag> 안에서 형제 없이 혼자 있는 <tag>li</tag>를 선택합니다.'
     ],
     boardMarkup : `
     <plate>
@@ -349,16 +349,16 @@ var levels = [
     `
   },
   {
-    selectorName: "Last Child Pseudo-selector",
-    helpTitle: "Select the last element inside of another element",
-    doThis : "Select the small apple and the pickle",
+    selectorName: "Last Child 가상 선택자",
+    helpTitle: "다른 요소 안에 있는 마지막 자식 요소를 선택하기",
+    doThis : "small한 음식들 중 마지막 음식들을 선택하세요",
     selector : ".small:last-child",
     syntax: ":last-child",
-    help : "You can use this selector to select an element that is the last child element inside of another element. <br><br>Pro Tip &rarr; In cases where there is only one element, that element counts as the first-child, only-child and last-child!",
+    help : "당신은 다른 요소 안에 있는 마지막 자식 요소를 선택하는 데에 이 선택자를 사용할 수 있습니다.<br><br>참고 &rarr; 형제 없이 혼자 있는 요소들은 first-child가 될 수도 있고, only-child가 될 수도 있으며 last-child가 될 수도 있습니다!",
     examples : [
-      '<strong>:last-child</strong> selects all last-child elements.',
-      '<strong>span:last-child</strong> selects all last-child <tag>span</tag> elements.',
-      '<strong>ul li:last-child</strong> selects the last <tag>li</tag> elements inside of any <tag>ul</tag>.'
+      '<strong>:last-child</strong>는 모든 마지막 자식 요소들을 선택합니다.',
+      '<strong>span:last-child</strong>는 <tag>span</tag>들 중 마지막 <tag>span</tag>을 선택합니다.',
+      '<strong>ul li:last-child</strong>는 <tag>ul</tag> 안에 있는 마지막 <tag>li</tag> 요소들을 선택합니다.'
     ],
     boardMarkup : `
     <plate id="fancy">
@@ -372,15 +372,15 @@ var levels = [
     <pickle class="small"/>`
   },
   {
-    selectorName: "Nth Child Pseudo-selector",
-    helpTitle: "Select an element by its order in another element",
-    doThis : "Select the 3rd plate",
-    selector : ":nth-child(3)",
+    selectorName: "Nth Child 가상 선택자",
+    helpTitle: "다른 요소 안에 있는 요소를 순서로 선택하기",
+    doThis : "3번째 plate를 선택하세요",
+    selector : "plate:nth-child(3)",
     syntax: ":nth-child(A)",
-    help : "Selects the <strong>nth</strong> (Ex: 1st, 3rd, 12th etc.) child element in another element.",
+    help : "다른 요소 안에 있는<strong>n번째</strong> 자식 요소를 선택합니다.",
     examples : [
-      '<strong>:nth-child(8)</strong> selects every element that is the 8th child of another element.',
-      '<strong>div p:nth-child(2)</strong> selects the second <strong>p</strong> in every <strong>div</strong>',
+      '<strong>:nth-child(8)</strong>은 다른 요소 안에 있는 8번째 자식 요소를 선택합니다.',
+      '<strong>div p:nth-child(2)</strong>는 <strong>div</strong> 안에 있는 모든 2번째 자식 요소들 중 <strong>p</strong>를 선택합니다.',
     ],
     boardMarkup : `
     <plate/>
@@ -390,14 +390,14 @@ var levels = [
     `
   },
   {
-    selectorName: "Nth Last Child Selector",
-    helpTitle: "Select an element by its order in another element, counting from the back",
-    doThis : "Select the 1st bento",
+    selectorName: "Nth Last Child 선택자",
+    helpTitle: "다른 요소 안에 있는 자식 요소를 역순에 따라 선택하기",
+    doThis : "뒤에서 세 번째에 있는 bento를 선택하세요",
     selector : "bento:nth-last-child(3)",
     syntax: ":nth-last-child(A)",
-    help : "Selects the children from the bottom of the parent. This is like nth-child, but counting from the back!",
+    help : "부모의 자식을 역순에 따라 선택합니다. nth-child와 비슷하지만, 순서는 역순입니다!",
     examples : [
-      '<strong>:nth-last-child(2)</strong> selects all second-to-last child elements.'
+      '<strong>:nth-last-child(2)</strong>는 다른 요소 안에서 뒤에서 두 번째에 있는 모든 요소들을 선택합니다.'
     ],
     boardMarkup: `
     <plate/>
@@ -411,14 +411,14 @@ var levels = [
     `
   },
   {
-    selectorName: "First of Type Selector",
-    helpTitle: "Select the first element of a specific type",
-    doThis : "Select first apple",
+    selectorName: "First of Type 선택자",
+    helpTitle: "특정 태그 중 첫번째 요소를 선택하기",
+    doThis : "첫 번째 'apple'을 선택하세요",
     selector : "apple:first-of-type",
     syntax: ":first-of-type",
-    help : "Selects the first element of that type within another element.",
+    help : "다른  요소 안에 있는 태그 중 첫 번째 요소를 선택합니다.",
     examples : [
-      '<strong>span:first-of-type</strong> selects the first <tag>span</tag> in any element.'
+      '<strong>span:first-of-type</strong>은 요소 안에 있는 첫째 <tag>span</tag>을 선택합니다.'
     ],
     boardMarkup: `
     <orange class="small"/>
@@ -433,8 +433,8 @@ var levels = [
     `
   },
   {
-    selectorName: "Nth of Type Selector",
-    doThis: "Select all even plates",
+    selectorName: "Nth of Type 선택자",
+    doThis: "짝수 번째 plate들을 선택하세요",
     selector: "plate:nth-of-type(even)",
     syntax: ":nth-of-type(A)",
     help: "Selects a specific element based on its type and order in another element - or even or odd instances of that element.",

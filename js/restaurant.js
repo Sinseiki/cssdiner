@@ -343,6 +343,8 @@ function showHelp() {
 
   $(".display-help .hint").html(help);
   $(".display-help .selector").text(selector);
+
+  $(".askAnswer").hover(function(){$('.answer').text(selector).css({display:'block'})},function(){$('.answer').css({display:'none'})})
 }
 
 function resetTable(){
@@ -630,7 +632,7 @@ function loadLevel(){
   loadBoard();
   resetTable();
 
-  $(".level-header .level-text").html("Level " + (currentLevel+1) + " of " + levels.length);
+  $(".level-header .level-text").html("레벨 " + (currentLevel+1) + " / " + levels.length);
 
   updateProgressUI(currentLevel, checkCompleted(currentLevel));
 

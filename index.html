@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>CSS Diner - Where we feast on CSS Selectors!</title>
+  <head></head>
+    <title>CSS 디너 - 어느 CSS 선택자에서 먹을 것인가!</title>
     <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/levels.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/restaurant.js" type="text/javascript" charset="utf-8"></script>
@@ -15,8 +15,8 @@
 
     <meta property="og:url"           content="http://cssdiner.com" />
     <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="CSS Diner" />
-    <meta property="og:description"   content="A fun game to help you learn and practice CSS selectors." />
+    <meta property="og:title"         content="CSS 디너" />
+    <meta property="og:description"   content="CSS 선택자를 재미있게 배우고 연습할 수 있는 게임입니다. CSS Dinner의 한국어판입니다." />
     <meta property="og:image"         content="https://flukeout.github.io/images/fb-share.jpg" />
   </head>
 
@@ -24,12 +24,12 @@
     <div class="left-col">
 
       <header>
-        CSS Diner
+        CSS 디너
         <div class="logo">
           <plate><apple /></plate>
         </div>
         <span class="share-menu">
-          Share
+          공유
           <a class="share-twitter" type="twitter" href="#"></a>
           <a class="share-facebook" type="facebook" href="#"></a>
           <a class="share-email" type="email" href="#"></a>
@@ -39,13 +39,13 @@
       <h2 class="order"></h2>
 
       <div class="note">
-        <h3>No worries, you've got this!</h3>
+        <h3>걱정마세요, 당신은 도착했어요!</h3>
         <p>
-          You're about to learn CSS Selectors!
-          Selectors are how you pick which element to apply styles to.
+          당신은 CSS 선택자를 배우러 방금 왔습니다!
+          선택자들은 스타일을 적용하기 위한 요소를 선택할 때 쓰이는 방법입니다.
         </p>
 
-        <h4>Exhibit 1 - A CSS Rule</h4>
+        <h4>진열 1 - CSS 규칙</h4>
 
         <pre>
 p {
@@ -53,21 +53,23 @@ p {
 }</pre>
 
         <p>
-          Here, the "p" is the selector (selects all &lt;p&gt; elements) and applies the margin-bottom style.
+          여기, "p"가 선택자입니다. ((모든) &lt;p&gt; 요소를 선택합니다.) 
+          그리고 margin-bottom 스타일이 적용됩니다.
         </p>
         <p>
-          To play, type in a CSS selector in the editor below to select the correct items on the table.If you get it right, you'll advance to the next level.
+          게임을 플레이하려면, CSS 선택자를 아래에 입력하여 table 위의 올바른 음식을 선택해주세요. 만일 당신이 올바른 것을 골랐다면 당신은 다음 레벨로 넘어가게 됩니다.
         </p>
         <p>
-          Hover over the items on the table to see their HTML markup.
+          각 음식들에 마우스 커서를 올리면 그것들의 HTML 마크업 소스를 보실 수 있습니다.
         </p>
         <p>
-          Get help with selectors on the right! &rarr;
+          선택자를 잘 써서 올바른 음식을 고르는 걸 도와주세요!
+          &rarr;
         </p>
-        <a class="note-toggle" href="#">Ok, got it!</a>
+        <a class="note-toggle" href="#">예, 잘 알겠습니다!</a>
       </div>
 
-      <a class="note-toggle" href="#">Help, I'm stuck!</a>
+      <a class="note-toggle" href="#">도와주세요, 빼낼 수가 없어요!</a>
 
       <div class="game-wrapper">
         <div class="table-wrapper">
@@ -85,23 +87,24 @@ p {
 
         <div class="editor-pane">
           <div class="input-header">
-            <div class="file-name">style.css</div> CSS Editor
+            <div class="file-name">style.css</div> CSS 편집기
           </div>
           <div class="file-window css-view">
             <div class="line-numbers">
               1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20
             </div>
-              <input class="input-strobe" type="text" placeholder="Type in a CSS selector"/><span class="plus">+</span><div class="enter-button">enter</div>
+              <input class="input-strobe" type="text" placeholder="여기에 '선택자'를 입력해주세요."/><span class="plus">+</span><div class="enter-button">enter</div>
             <div>
             {<br/>
-            /* Styles would go here. */<br/>
+            /* CSS 스타일은 여기에 적히게 됩니다. */<br/>
             }
             </div>
             <div class="help">
               <br/>
               /* <br/>
-              Type a number to skip to a level.<br/>
-              Ex &rarr; "5" for level 5 <br/>*/
+              넘어가고 싶은 레벨을 적으세요.
+              <br/>
+              예 &rarr; "5"를 적으면 레벨 5로 넘어갑니다. <br/>*/
             </div>
           </div>
         </div>
@@ -109,7 +112,7 @@ p {
         <div class="editor-pane html-view">
           <div class="input-header">
             <div class="file-name">table.html</div>
-            HTML Viewer
+            HTML 뷰어
           </div>
           <div class="file-window">
             <div class="line-numbers">1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20</div>
@@ -152,15 +155,17 @@ p {
           <h2 class="title"></h2>
           <h3 class="syntax"></h3>
           <div class="hint"></div>
-          <h4 class="examples-title">Examples</h4>
+          <h4 class="examples-title">예시</h4>
           <div class="examples"></div>
+          <div style="margin-top:100px;cursor:pointer;width:60px" class="askAnswer">정답보기</div>
+          <div style="text-align:center;display:none" class="answer"></div>
         </div>
       </div>
 
       <div class="level-menu">
-        <h2>Choose a level</h2>
+        <h2>레벨 선택</h2>
         <div class="levels"><!-- level links are inserted here--></div>
-        <a class="reset-progress" href="#">Reset Progress</a>
+        <a class="reset-progress" href="#">레벨 초기화</a>
       </div>
 
       <div class="level-menu-toggle-wrapper">
