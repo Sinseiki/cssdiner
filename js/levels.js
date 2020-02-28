@@ -437,10 +437,10 @@ var levels = [
     doThis: "짝수 번째 plate들을 선택하세요",
     selector: "plate:nth-of-type(even)",
     syntax: ":nth-of-type(A)",
-    help: "Selects a specific element based on its type and order in another element - or even or odd instances of that element.",
+    help: "다른 요소 안에서 특정 태그를 순서에 따라 선택합니다. 짝수번째(even)나 홀수번째(odd) 요소도 선택할 수 있습니다.",
     examples: [
-      '<strong>div:nth-of-type(2)</strong> selects the second instance of a div.',
-      '<strong>.example:nth-of-type(odd)</strong> selects all odd instances of a the example class.'
+      '<strong>div:nth-of-type(2)</strong>는 두 번째 <strong>div</strong> 요소를 선택합니다.',
+      '<strong>.example:nth-of-type(odd)</strong>는 example 클래스가 있는 모든 홀수번째 요소를 선택합니다.'
     ],
     boardMarkup : `
     <plate/>
@@ -452,13 +452,13 @@ var levels = [
     `
   },
   {
-    selectorName: "Nth-of-type Selector with Formula",
-    doThis: "Select every 2nd plate, starting from the 3rd",
+    selectorName: "수식이 있는 Nth-of-type 선택자",
+    doThis: "3번째 plate부터 2n번째 plate를 선택하세요.",
     selector: "plate:nth-of-type(2n+3)",
     syntax: ":nth-of-type(An+B)",
-    help: "The nth-of-type formula selects every nth element, starting the count at a specific instance of that element.",
+    help: "nth-of-type 수식 선택자는 특정 <strong>B</strong> 번째 요소부터 시작해서 각각의 <strong>A</strong>번째를 선택합니다.",
     examples: [
-      '<strong>span:nth-of-type(6n+2)</strong> selects every 6th instance of a <tag>span</tag>, starting from (and including) the second instance.'
+      '<strong>span:nth-of-type(6n+2)</strong>는 두 번째 <tag>span</tag>부터 시작해서 각 6번째 <tag>span</tag>들을 선택합니다.(n이 0이 될 수 있기 때문에 두 번째 <tag>span</tag>도 포함해서 선택합니다.)'
     ],
     boardMarkup : `
     <plate/>
@@ -476,14 +476,14 @@ var levels = [
     `
   },
   {
-    selectorName: "Only of Type Selector",
-    helpTitle: "Select elements that are the only ones of their type within of their parent element",
+    selectorName: "Only of Type 선택자",
+    helpTitle: "부모 안에 하나만 있는 태그 요소를 선택하기",
     selector : "apple:only-of-type",
     syntax: ":only-of-type",
-    doThis : "Select the apple on the middle plate",
-    help : "Selects the only element of its type within another element.",
+    doThis : "plate 안에 하나만 있는 apple을 선택하세요",
+    help : "다른 요소 안에 하나만 있는 태그 요소를 선택합니다.",
     examples : [
-      '<strong>p span:only-of-type</strong> selects a <tag>span</tag> within any <tag>p</tag> if it is the only <tag>span</tag> in there.'
+      '<strong>p span:only-of-type</strong>는 <tag>p</tag> 안에서 하나만 있는 <tag>span</tag> 요소를 선택합니다.'
     ],
     boardMarkup: `
     <plate id="fancy">
