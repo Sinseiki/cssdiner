@@ -33,7 +33,7 @@ var levels = [
     `
   },
   {
-    doThis : "fancy plate를 선택하세요",
+    doThis : "fancy한 plate를 선택하세요",
     selector : "#fancy",
     selectorName: "ID 선택자",
     helpTitle: "ID로 요소를 선택하기",
@@ -69,7 +69,7 @@ var levels = [
     `
   },
   {
-    doThis : "fancy plate 안에 있는 pickle을 선택하세요",
+    doThis : "fancy한 plate 안에 있는 pickle을 선택하세요",
     selector : "#fancy pickle",
     helpTitle: "자손 선택자와 ID 선택자를 함께 쓰기",
     syntax: "#id&nbsp;&nbsp;A",
@@ -90,7 +90,7 @@ var levels = [
     `
   },
   {
-    doThis : "small apple들을 선택하세요",
+    doThis : "small한 apple들을 선택하세요",
     selector : ".small",
     selectorName: "클래스 선택자",
     helpTitle: "클래스로 요소를 선택하기",
@@ -109,7 +109,7 @@ var levels = [
     `
   },
   {
-    doThis : "small orange들을 선택하세요",
+    doThis : "small한 orange들을 선택하세요",
     selector : "orange.small",
     helpTitle: "클래스 선택자를 다른 선택자와 함께 쓰기",
     syntax: "A.클래스",
@@ -132,7 +132,7 @@ var levels = [
     </plate>`
   },
   {
-    doThis : "bento들 안에 있는 small orange들을 선택하세요",
+    doThis : "bento들 안에 있는 small한 orange들을 선택하세요",
     selector : "bento orange.small",
     syntax: "생각해보세요!",
     helpTitle: "당신은 할 수 있습니다...",
@@ -323,7 +323,7 @@ var levels = [
   {
     selectorName: "Only Child 가상 선택자",
     helpTitle: "형제 없이 혼자 있는 요소를 선택하기",
-    doThis : "plate들 안에 혼자 있는 음식들을 선택하세요",
+    doThis : "plate들 안에 혼자 있는 모든 음식들을 선택하세요",
     selector : "plate *:only-child",
     syntax: ":only-child",
     help : "당신은 어떤 요소 안에 혼자 있는 요소를 선택할 수 있습니다.",
@@ -437,10 +437,10 @@ var levels = [
     doThis: "짝수 번째 plate들을 선택하세요",
     selector: "plate:nth-of-type(even)",
     syntax: ":nth-of-type(A)",
-    help: "다른 요소 안에서 특정 태그를 순서에 따라 선택합니다. 짝수번째(even)나 홀수번째(odd) 요소도 선택할 수 있습니다.",
+    help: "다른 요소 안에서 특정 태그를 순서에 따라 선택합니다. 짝수 번째(even)나 홀수 번째(odd) 요소도 선택할 수 있습니다.",
     examples: [
       '<strong>div:nth-of-type(2)</strong>는 두 번째 <strong>div</strong> 요소를 선택합니다.',
-      '<strong>.example:nth-of-type(odd)</strong>는 example 클래스가 있는 모든 홀수번째 요소를 선택합니다.'
+      '<strong>.example:nth-of-type(odd)</strong>는 example 클래스가 있는 모든 홀수 번째 요소를 선택합니다.'
     ],
     boardMarkup : `
     <plate/>
@@ -538,7 +538,7 @@ var levels = [
   },
   {
     selectorName: "부정 가상 선택자",
-    helpTitle: "부정 선택자 안에 쓴 것과 맞지 않은 요소들을 선택합니다.",
+    helpTitle: "부정 선택자 안에 쓴 것과 맞지 않은 요소들을 선택하기",
     doThis : "small이 아닌 apple들을 선택하세요",
     selector : "apple:not(.small)",
     syntax: ":not(X)",
@@ -564,8 +564,8 @@ var levels = [
   },
   {
     selectorName: "속성 선택자",
-    helpTitle: "특정 속성을 가진 모든 요소들을 선택합니다.",
-    doThis : "누군가를 위한(for) 음식을 선택하세요",
+    helpTitle: "특정 속성을 가진 모든 요소들을 선택하기",
+    doThis : "누군가를 위한(for) 음식들을 선택하세요",
     selector : "[for]",
     syntax: "[속성]",
     help : "속성은 여는 태그에 있습니다. 이를테면 <tag>span 속성='값'</tag> 이런 식으로 쓰입니다. 어떤 속성은 '값'을 가지지 않을 때도 있습니다.",
@@ -582,15 +582,15 @@ var levels = [
   },
   {
     selectorName: "속성 선택자",
-    helpTitle: "특정 속성을 가진 모든 요소들을 선택합니다",
+    helpTitle: "특정 속성을 가진 모든 요소들을 선택하기",
     doThis : "누군가를 위한(for) plate들을 선택하세요",
     selector : "plate[for]",
     syntax: "A[속성]",
-    help : "Combine the attribute selector with another selector (like the tag name selector) by adding it to the end.",
+    help : "태그 선택자 같은 다른 선택자 뒤에 속성 선택자를 붙여서 사용할 수 있습니다.",
     examples : [
-      '<strong>[value]</strong> selects all elements that have a <strong>value="anything"</strong> attribute.',
-      '<strong>a[href]</strong> selects all <tag>a</tag> elements that have a <strong>href="anything"</strong> attribute.',
-      '<strong>input[disabled]</strong> selects all <tag>input</tag> elements with the <strong>disabled</strong> attribute'
+      '<strong>[attribute]</strong>는 <strong>attribute="값"</strong>인 모든 요소들을 선택합니다.',
+      '<strong>a[href]</strong>는 모든 <tag>a</tag> 태그 중에서 <strong>href="값"</strong>이 있는 요소들을 선택합니다. (<tag>a href="값"</tag>)',
+      '<strong>input[disabled]</strong>은 모든 <tag>input</tag> 요소들 중에서 <strong>disabled</strong> 속성이 있는 요소들을 선택합니다.'
     ],
     boardMarkup:`
     <plate for="Sarah"><pickle/></plate>
@@ -600,14 +600,14 @@ var levels = [
     `
   },
   {
-    selectorName: "Attribute Value Selector",
-    helpTitle: "Select all elements that have a specific attribute value",
-    doThis : "Select Vitaly's meal",
+    selectorName: "속성 값 선택자",
+    helpTitle: "특정 속성값을 가진 모든 요소들을 선택하기",
+    doThis : "Vitaly를 위한(for) 음식을 선택하세요",
     selector : "[for=Vitaly]",
-    syntax: '[attribute="value"]',
-    help : "Attribute selectors are case sensitive, each character must match exactly.",
+    syntax: '[속성="값"]',
+    help : "속성 선택자는 민감한 아이이기 때문에, 각 글자가 정확하게 일치해야 합니다.",
     examples : [
-      '<strong>input[type="checkbox"]</strong> selects all checkbox input elements.'
+      '<strong>input[type="checkbox"]</strong>는 <strong>type</strong> 속성의 값이 <strong>checkbox</strong>인 <strong>input</strong> 요소들을 선택합니다.'
     ],
     boardMarkup:`
     <apple for="Alexei" />
@@ -617,14 +617,15 @@ var levels = [
     `
   },
   {
-    selectorName: "Attribute Starts With Selector",
-    helpTitle: "Select all elements with an attribute value that starts with specific characters",
-    doThis : "Select the items for names that start with 'Sa'",
+    selectorName: "속성^ 선택자",
+    helpTitle: "특정 글자들로 시작하는 속성 값을 가진 모든 요소들을 선택하기",
+    doThis : "'Sa'로 시작하는 사람들을 위한(for) 음식들을 선택하세요",
     selector : '[for^="Sa"]',
-    syntax: '[attribute^="value"]',
+    syntax: '[속성^="글자들"]',
+    help : "세 특수기호(^,$,*)는 '정규표현식'이라는 다른 언어에 있는 기호입니다. CSS는 이 기호들을 정규표현식과 비슷한 기능으로 사용합니다.<br><br>^ : 시작 글자들을 가리킨다. <br>$ : 끝 글자들을 가리킨다.<br>* : 포함된 특정 글자들을 가리킨다.",
     // help : "You can use quotes around the value in the selector, or not&mdash;it's optional!",
     examples : [
-      '<strong>.toy[category^="Swim"]</strong> selects elements with class <strong>toy</strong> and either <strong>category="Swimwear</strong> or <strong>category="Swimming"</strong>.'
+      '<strong>.toy[category^="Swim"]</strong>은 <strong>toy</strong> 클래스를 가진 요소들 중 <strong>category="Swimwear</strong>나 <strong>category="Swimming"</strong> 같은 요소들을 선택합니다.'
     ],
     boardMarkup: `
     <plate for="Sam"><pickle/></plate>
@@ -633,14 +634,14 @@ var levels = [
     `
   },
   {
-    selectorName: "Attribute Ends With Selector",
-    helpTitle: "Select all elements with an attribute value that ends with specific characters",
-    doThis : "Select the items for names that end with 'ato'",
+    selectorName: "속성$ 선택자",
+    helpTitle: "특정 글자들로 끝나는 속성 값을 가진 모든 요소들을 선택하기",
+    doThis : "'ato'로 끝나는 사람들을 위한(for) 음식들을 선택하세요",
     selector : '[for$="ato"]',
-    syntax: '[attribute$="value"]',
-    help : '',
+    syntax: '[속성$="글자들"]',
+    help : "세 특수기호(^,$,*)는 '정규표현식'이라는 다른 언어에 있는 기호입니다. CSS는 이 기호들을 정규표현식과 비슷한 기능으로 사용합니다.<br><br>^ : 시작 글자들을 가리킨다. <br>$ : 끝 글자들을 가리킨다.<br>* : 포함된 특정 글자들을 가리킨다.",
     examples : [
-      '<strong>img[src$=".jpg"]</strong> selects all images display a <strong>.jpg</strong> image.',
+      '<strong>img[src$=".jpg"]</strong>는 파일 이름이 <strong>.jpg</strong>로 끝나는 모든 이미지들을 선택합니다.',
     ],
     boardMarkup:`
     <apple class="small"/>
@@ -651,15 +652,15 @@ var levels = [
     `
   },
   {
-    selectorName: "Attribute Wildcard Selector",
-    helpTitle: "Select all elements with an attribute value that contains specific characters anywhere",
-    syntax: '[attribute*="value"]',
-    doThis : "Select the meals for names that contain 'obb'",
+    selectorName: "속성* 선택자",
+    helpTitle: "특정 글자들을 포함하는 속성 값을 가진 모든 요소들을 선택하기",
+    syntax: '[속성*="글자들"]',
+    doThis : "'obb'를 포함하는 사람들을 위한(for) 음식들을 선택하세요",
     selector : '[for*="obb"]',
-    help : 'A useful selector if you can identify a common pattern in things like <strong>class</strong>, <strong>href</strong> or <strong>src</strong> attributes.',
+    help : '<strong>class</strong>, <strong>href</strong>, <strong>src</strong>와 같은 속성들의 값에서 같은 패턴을 찾을 수 있을 때 쓸 수 있는 유용한 선택자입니다.',
     examples : [
-      '<strong>img[src*="/thumbnails/"]</strong> selects all image elements that show images from the "thumbnails" folder.',
-      '<strong>[class*="heading"]</strong> selects all elements with "heading" in their class, like <strong>class="main-heading"</strong> and <strong>class="sub-heading"</strong>'
+      '<strong>img[src*="/thumbnails/"]</strong>는 thumbnails 폴더 안에 있는 모든 이미지들을 선택합니다.',
+      '<strong>[class*="heading"]</strong>는 클래스에 "heading"이 포함된 <strong>class="main-heading"</strong>, <strong>class="sub-heading"</strong> 같은 요소들을 선택합니다. '
     ],
     boardMarkup:`
     <bento for="Robbie"><apple /></bento>
