@@ -5,7 +5,7 @@ var levels = [
     doThis : "plate들을 선택하세요",
     selector : "plate",
     syntax : "A",
-    help : "모든 <strong>A</strong> 태그들을 선택합니다.<br><br>또한 태그는 종류에 따라 다릅니다. 예를 들면 <tag>div</tag>, <tag>p</tag>, <tag>ul</tag>는 서로 다른 태그입니다.",
+    help : "모든 <strong>A</strong> 태그들을 선택합니다.<br><br>또한 태그는 종류에 따라 다릅니다. 예를 들면 <tag>div</tag>, <tag>p</tag>, <tag>ul</tag>은 서로 다른 태그입니다.",
     examples : [
       '<strong>div</strong>는 모든 <tag>div</tag> 태그로 이루어진 요소를 선택합니다.',
       '<strong>p</strong>는 모든 <tag>p</tag> 태그로 이루어진 요소를 선택합니다.',
@@ -94,7 +94,7 @@ var levels = [
     selector : ".small",
     selectorName: "클래스 선택자",
     helpTitle: "클래스로 요소를 선택하기",
-    syntax: ".class",
+    syntax: ".클래스",
     help : '클래스 선택자는 해당 클래스를 가지고 있는 모든 요소를 선택합니다. 각 요소는 ID를 하나만 가질 수 있지만 클래스는 하나 이상 가질 수 있습니다.',
     examples : [
     '<strong>.neato</strong>는 <strong>class="neato"</strong>인 모든 요소를 선택합니다.'
@@ -112,7 +112,7 @@ var levels = [
     doThis : "small orange들을 선택하세요",
     selector : "orange.small",
     helpTitle: "클래스 선택자를 다른 선택자와 함께 쓰기",
-    syntax: "A.className",
+    syntax: "A.클래스",
     help : '당신은 클래스 선택자를 태그 선택자와 같은 다른 선택자를 결합할 수 있습니다.',
     examples : [
       '<strong>ul.important</strong>는 모든 <tag>ul</tag> 요소들 중에서 <strong>class="important"</strong>인 요소들을 선택합니다.',
@@ -323,8 +323,8 @@ var levels = [
   {
     selectorName: "Only Child 가상 선택자",
     helpTitle: "형제 없이 혼자 있는 요소를 선택하기",
-    doThis : "plate들 안에 혼자 있는 apple과 pickle을 선택하세요",
-    selector : "apple:only-child, pickle:only-child",
+    doThis : "plate들 안에 혼자 있는 음식들을 선택하세요",
+    selector : "plate *:only-child",
     syntax: ":only-child",
     help : "당신은 어떤 요소 안에 혼자 있는 요소를 선택할 수 있습니다.",
     examples : [
@@ -499,15 +499,15 @@ var levels = [
     `
   },
   {
-    selectorName: "Last of Type Selector",
-    helpTitle: "Select the last element of a specific type",
-    doThis : "Select the last apple and orange",
-    selector : ".small:last-of-type",
+    selectorName: "Last of Type 선택자",
+    helpTitle: "특정 태그의 마지막 요소를 선택하기",
+    doThis : "마지막 orange와 마지막 apple을 선택하세요",
+    selector : "orange:last-of-type, apple:last-of-type",
     syntax: ":last-of-type",
-    help : "Selects each last element of that type within another element. Remember type refers the kind of tag, so <tag>p</tag> and <tag>span</tag> are different types. <br><br> I wonder if this is how the last dinosaur was selected before it went extinct.",
+    help : "다른 요소 안에 있는 마지막 태그 요소를 선택합니다.",
     examples : [
-      '<strong>div:last-of-type</strong> selects the last <tag>div</tag> in every element.',
-      '<strong>p span:last-of-type</strong> selects the last <tag>span</tag> in every <tag>p</tag>.'
+      '<strong>div:last-of-type</strong>는 요소 안에 있는 모든 마지막 <tag>div</tag> 태그를 선택합니다.',
+      '<strong>p span:last-of-type</strong>는 <tag>p</tag> 태그 안에 있는 모든 마지막 <tag>span</tag> 태그를 선택합니다.'
     ],
     boardMarkup : `
     <orange class="small"/>
@@ -519,14 +519,14 @@ var levels = [
     `
   },
   {
-    selectorName: "Empty Selector",
-    helpTitle: "Select elements that don't have children",
-    doThis : "Select the empty bentos",
+    selectorName: "Empty 선택자",
+    helpTitle: "자식이 없는 요소를 선택하기",
+    doThis : "안에 아무 것도 없는 bento를 선택하세요",
     selector : "bento:empty",
     syntax: ":empty",
-    help : "Selects elements that don't have any other elements inside of them.",
+    help : "안에 아무 자식 요소도 가지지 않은 요소를 선택합니다.",
     examples : [
-      '<strong>div:empty</strong> selects all empty <tag>div</tag> elements.'
+      '<strong>div:empty</strong>는 안에 자식이 없는 <tag>div</tag>요소들을 선택합니다.'
     ],
     boardMarkup:`
     <bento/>
@@ -537,16 +537,16 @@ var levels = [
     <bento/>`
   },
   {
-    selectorName: "Negation Pseudo-class",
-    helpTitle: "Select all elements that don't match the negation selector",
-    doThis : "Select the big apples",
+    selectorName: "부정 가상 선택자",
+    helpTitle: "부정 선택자 안에 쓴 것과 맞지 않은 요소들을 선택합니다.",
+    doThis : "small이 아닌 apple들을 선택하세요",
     selector : "apple:not(.small)",
     syntax: ":not(X)",
-    help : 'You can use this to select all elements that do not match selector <strong>"X"</strong>.',
+    help : '<strong>"X"</strong>가 아닌 모든 요소들을 선택할 수 있습니다.',
     examples : [
-      '<strong>:not(#fancy)</strong> selects all elements that do not have <strong>id="fancy"</strong>.',
-      '<strong>div:not(:first-child)</strong> selects every <tag>div</tag> that is not a first child.',
-      '<strong>:not(.big, .medium)</strong> selects all elements that do not have <strong>class="big"</strong> or <strong>class="medium"</strong>.'
+      '<strong>:not(#fancy)</strong>는 <strong>id="fancy"</strong>가 아닌 모든 요소들을 선택합니다.',
+      '<strong>div:not(:first-child)</strong>는 첫째 자식 요소가 아닌 모든 <tag>div</tag> 요소들을 선택합니다.',
+      '<strong>:not(.big, .medium)</strong>은 <strong>class="big"</strong> 혹은 <strong>class="medium"</strong>이 아닌 요소들을 선택합니다.'
     ],
     boardMarkup: `
     <plate id="fancy">
@@ -563,15 +563,15 @@ var levels = [
     `
   },
   {
-    selectorName: "Attribute Selector",
-    helpTitle: "Select all elements that have a specific attribute",
-    doThis : "Select the items for someone",
+    selectorName: "속성 선택자",
+    helpTitle: "특정 속성을 가진 모든 요소들을 선택합니다.",
+    doThis : "누군가를 위한(for) 음식을 선택하세요",
     selector : "[for]",
-    syntax: "[attribute]",
-    help : 'Attributes appear inside the opening tag of an element, like this: <tag>span attribute="value"</tag>. An attribute does not always have a value, it can be blank!',
+    syntax: "[속성]",
+    help : "속성은 여는 태그에 있습니다. 이를테면 <tag>span 속성='값'</tag> 이런 식으로 쓰입니다. 어떤 속성은 '값'을 가지지 않을 때도 있습니다.",
     examples : [
-      '<strong>a[href]</strong> selects all <tag>a</tag> elements that have a <strong>href="anything"</strong> attribute.',
-      '<strong>[type]</strong> selects all elements that have a <strong>type="anything"</strong>. attribute'
+      '<strong>a[href]</strong>는 모든 <tag>a</tag> 태그 중에서 <strong>href="값"</strong>이 있는 요소들을 선택합니다. (<tag>a href="값"</tag>)',
+      '<strong>[type]</strong>는 여는 태그에 <strong>type="값"</strong>이 있는 요소들을 선택합니다.'
     ],
     boardMarkup:`
     <bento><apple class="small"/></bento>
@@ -581,11 +581,11 @@ var levels = [
     <pickle/>`
   },
   {
-    selectorName: "Attribute Selector",
-    helpTitle: "Select all elements that have a specific attribute",
-    doThis : "Select the plates for someone",
+    selectorName: "속성 선택자",
+    helpTitle: "특정 속성을 가진 모든 요소들을 선택합니다",
+    doThis : "누군가를 위한(for) plate들을 선택하세요",
     selector : "plate[for]",
-    syntax: "A[attribute]",
+    syntax: "A[속성]",
     help : "Combine the attribute selector with another selector (like the tag name selector) by adding it to the end.",
     examples : [
       '<strong>[value]</strong> selects all elements that have a <strong>value="anything"</strong> attribute.',
