@@ -1,8 +1,8 @@
-# CSS 다이너에 오신 것을 환영합니다.
+# CSS 다이너(한글판)에 오신 것을 환영합니다.
 
 CSS 다이너는 CSS 선택자를 배우고 연습할 수 있는 재미있는 게임입니다.
 
-[sinseiki.github.io/cssdiner](https://sinseiki.github.io/cssdiner)에서 플레이하실 수 있습니다.
+[sinseiki.github.io/cssdiner](https://sinseiki.github.io/cssdiner)에서 한글로 플레이하실 수 있습니다.
 
 
 # Welcome to CSS Diner
